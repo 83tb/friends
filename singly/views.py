@@ -5,7 +5,10 @@ from models import UserProfile
 
 
 def authenticate_redirect(request, service):
-    url = SinglyHelper.get_authorize_url(service)
+    if request.user.is_authenticated():
+        url = SinglyHelper.get_authorize_url(service, request.user.get_profile().access_token)
+    else:
+        url = SinglyHelper.get_authorize_url(service)
     return HttpResponseRedirect(url)
 
 

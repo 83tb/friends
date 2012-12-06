@@ -14,6 +14,7 @@ class UserProfileManager(models.Manager):
         try:
             user_profile = self.get(singly_id=singly_id)
             user_profile.profiles = profiles
+            user_profile.access_token = access_token
             user_profile.save()
 
         except ObjectDoesNotExist:

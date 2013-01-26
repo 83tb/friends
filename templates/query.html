@@ -3,6 +3,7 @@
 
 
 {% block content %}
+    <div class="container">
 <h1><a href="/">Friends</a></h1>
 
     <FORM class="form-search" method="POST">
@@ -12,12 +13,12 @@
 
     </FORM>
 
-    <div class="container">
+
 
         <TABLE class="table table-bordered">
         {% for entry in r %}
             <TR><TD>
-            
+
 
             {% if entry.name %}
                 <h3>{{ entry.name }}</h3>
@@ -26,7 +27,7 @@
                 <P>{{ entry.description }}<P><BR>
             {% endif %}
         {% if entry.thumbnail_url %}
-        <IMG width='90px' SRC='{{ entry.thumbnail_url   }}'>
+        <IMG class="img-rounded" width='90px' SRC='{{ entry.thumbnail_url   }}'>
         {% endif %}
 
 
@@ -63,7 +64,7 @@
 
     </TABLE>
 
-
+</div>
 
 
 

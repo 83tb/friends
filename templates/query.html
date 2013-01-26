@@ -5,6 +5,13 @@
 {% block content %}
 <h1><a href="/">Friends</a></h1>
 
+    <FORM method="POST">
+
+        <INPUT type="text" name="q">
+        <BUTTON type="submit">Search</BUTTON>
+
+    </FORM>
+
     <div>
         {% for entry in r %}
 

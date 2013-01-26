@@ -30,8 +30,13 @@ def index(request, template='index.html'):
         )
     return response
 
+@csrf_exempt
 @login_required()
 def query(request, template='query.html'):
+
+    if request.method == 'POST':
+        return HttpResponseRedirect('query?q=' + str(request.POST['q']))
+
     try:
         q = request.GET['q']
         user_profile = request.user.get_profile()

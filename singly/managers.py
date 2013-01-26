@@ -1,7 +1,23 @@
 from django.db import models
 from singly import *
-from webapp.user import User
+from django.contrib.auth.models import User
 from django.core.exceptions import ObjectDoesNotExist
+
+
+
+
+class User(User):
+    """
+    Users within the Django authentication system are represented by this
+    model.
+
+    Username and password are required. Other fields are optional.
+    """
+    username = models.CharField(_('username'), max_length=130, unique=True,
+        help_text=_('Required. 30 characters or fewer. Letters, numbers and '
+                    '@/./+/-/_ characters'))
+    first_name = models.CharField(_('first name'), max_length=130, blank=True)
+    last_name = models.CharField(_('last name'), max_length=130, blank=True)
 
 
 class UserProfileManager(models.Manager):

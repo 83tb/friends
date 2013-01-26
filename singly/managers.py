@@ -1,6 +1,6 @@
 from django.db import models
 from singly import *
-from django.contrib.auth.models import User
+from auth.models import User
 from django.core.exceptions import ObjectDoesNotExist
 
 
@@ -22,7 +22,7 @@ class UserProfileManager(models.Manager):
                 user = User.objects.get(username=singly_id)
             except ObjectDoesNotExist:
                 # Made-up email address included due to convention
-                user = User.objects.create_user(singly_id, singly_id + '@s.m', 'fakepassword')
+                user = User.objects.create_user(singly_id, singly_id + '@singly.com', 'fakepassword')
             user_profile = self.model(
                 access_token=access_token,
                 singly_id=singly_id,

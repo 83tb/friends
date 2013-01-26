@@ -2,9 +2,10 @@
    font-family: Helvetica, Arial;
 }
 
-body {
+body { padding-left: 2px; padding-right: 2px;}
 
-}
+
+.media { border: 1px solid; }
 
 #access-token {
    width: 200px;

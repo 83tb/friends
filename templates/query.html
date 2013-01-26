@@ -1,20 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Singly Django Example</title>
+{% extends base.html %}
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
-    <script>
-        var accessToken = '{{ user_profile.access_token }}';
-    </script>
 
-    <script src="/static/app.js"></script>
-
-    <link rel="stylesheet" href="/static/style.css" />
-</head>
-
-<body>
+{% block content %}
 <h1><a href="/">Friends</a></h1>
 
     <div>
@@ -61,6 +49,4 @@
      style=" width: 90px; height: 90px;">
 
 
-
-</body>
-</html>
+{% endblock %}

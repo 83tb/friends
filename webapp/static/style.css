@@ -5,7 +5,7 @@
 body { padding-left: 2px; padding-right: 2px; background: #ededed;}
 
 
-.media { border: 1px solid #dddddd; background: #fbfbfb; border-radius: 6px; }
+.media { border: 1px solid #dddddd; background: #fbfbfb; border-radius: 6px; padding-left: 3px; }
 
 #access-token {
    width: 200px;

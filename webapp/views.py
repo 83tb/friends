@@ -3,6 +3,7 @@ from django.template.context import RequestContext
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 import requests
+from django.http import HttpResponse
 
 def index(request, template='index.html'):
     services = [
@@ -34,6 +35,9 @@ def query(request, template='query.html'):
         return response
     except KeyError:
         return render(request,'search.html')
+
+import simplejson
+
 
 def json_response(func):
     """

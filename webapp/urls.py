@@ -9,6 +9,6 @@ urlpatterns = patterns('webapp.views',
     url(r'', include('singly.urls')),
     url(r'^$', 'index', name='index'),
     url(r'query$', 'query', name='query'),
-    url(r'manifest.json$', lambda x: HttpResponseRedirect('/static/manifest.json'))
+    url(r'manifest.json$', 'manifest')
 
 )

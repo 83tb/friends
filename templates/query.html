@@ -5,15 +5,19 @@
 {% block content %}
 <h1><a href="/">Friends</a></h1>
 
-    <FORM method="POST">
+    <FORM class="form-search" method="POST">
 
-        <INPUT type="text" name="q">
-        <BUTTON type="submit">Search</BUTTON>
+        <INPUT class="search-query" type="text" name="q">
+        <BUTTON class="btn btn-success" type="submit">Search</BUTTON>
 
     </FORM>
 
-    <div>
+    <div class="container">
+
+
         {% for entry in r %}
+            <div class="row">
+
             {% if entry.name %}
                 <h3>{{ entry.name }}</h3>
             {% endif %}
@@ -49,7 +53,7 @@
             <BR>
             {% endif %}
 
-
+            </div>
         {% endfor %}
 
 

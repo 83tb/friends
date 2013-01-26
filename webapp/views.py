@@ -70,7 +70,7 @@ def manifest(request):
         "description": "Search your friends throughout your social networks. We do not store or cache your data.",
         "launch_path": "/",
         "icons": {
-            "128": "glyphicons-halflings.png"
+            "128": "/static/glyphicons-halflings.png"
         },
         "developer": {
             "name": "83tb",

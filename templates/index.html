@@ -36,6 +36,7 @@
     <P>We DO NOT download or cache your social data!!</P>
 
     <FORM method="POST">
+        {{ csrf_token }}
         <INPUT type="text" id="q">
         <BUTTON type="submit">Search</BUTTON>
 

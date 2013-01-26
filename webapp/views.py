@@ -4,8 +4,9 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 import requests
 from django.http import HttpResponseRedirect
+from django.views.decorators.csrf import csrf_exempt
 
-
+@csrf_exempt
 def index(request, template='index.html'):
     services = [
         'Facebook',

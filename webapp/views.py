@@ -48,6 +48,7 @@ def json_response(func):
     """
     def decorator(request, *args, **kwargs):
         objects = func(request, *args, **kwargs)
+        from django.http import HttpResponse
         if isinstance(objects, HttpResponse):
             return objects
         try:

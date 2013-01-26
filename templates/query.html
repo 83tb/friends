@@ -22,9 +22,12 @@
             {% if entry.name %}
                 <h3>{{ entry.name }}</h3>
             {% endif %}
+            {% if entry.description %}
+                <P>{{ entry.description }}<P><BR>
+            {% endif %}
 
             {% if entry.phone %}
-                <A href='{{ entry.phone }}'>{{ entry.phone }}</A>
+                <A href='{{ entry.phone }}'>{{ entry.phone }}</A><BR>
             {% endif %}
 
 

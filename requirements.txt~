@@ -5,4 +5,3 @@
 django
 requests
 dj-database-url
-psycopg2==2.4.5

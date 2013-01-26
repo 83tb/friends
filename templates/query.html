@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Singly Django Example</title>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+    <script>
+        var accessToken = '{{ user_profile.access_token }}';
+    </script>
+
+    <script src="/static/app.js"></script>
+
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body>
+<h1><a href="/">Friends</a></h1>
+
+    <div>
+        {% for entry in r %}
+
+        {% if entry.thumbnail_url %}
+        <IMG width='90px' SRC='{{ entry.thumbnail_url   }}'>
+        {% endif %}
+
+        {% if entry.services.twitter.thumbnail_url and not entry.thumbnail_url  %}
+        <IMG width='50px' SRC='{{ entry.services.twitter.thumbnail_url   }}'>
+        {% endif %}
+        {{ entry }}
+            <HR>
+        {% endfor %}
+
+
+
+
+    </div>
+
+
+
+<div class="btn-group">
+    <a class="btn" href="#">
+        Facebook
+    </a>
+    <a class="btn" href="#">
+        Twitter
+    </a>
+    <a class="btn" href="#">
+        Linkedin
+    </a>
+</div>
+<div class="container">
+    <div class="control-group">
+    </div>
+    <label for="textinput1">
+        Search for your friends
+    </label>
+    <input name="textinput1" type="" placeholder="Chris">
+</div>
+<img src="https://graph.facebook.com/100000622072626/picture?type=large&amp;date_format=U"
+     style=" width: 90px; height: 90px;">
+
+
+
+</body>
+</html>

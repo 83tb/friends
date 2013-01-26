@@ -6,5 +6,7 @@ from django.conf.urls import patterns, include, url
 
 urlpatterns = patterns('webapp.views',
     url(r'', include('singly.urls')),
-    url(r'^$', 'index', name='index')
+    url(r'^$', 'index', name='index'),
+    url(r'query$', 'query', name='query')
+
 )

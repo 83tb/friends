@@ -19,16 +19,21 @@
         </li>
     {% endfor %}
     </ul>
-    <P>We DO NOT download or cache your social data!!</P>
+
 
 
     {% if request.user.is_authenticated %}
+
+    Just type a name or surname of the person you are looking for!
     <FORM class="form-search" method="POST">
 
         <INPUT type="text" name="q">
         <BUTTON class="btn btn-success" type="submit">Search</BUTTON>
 
-    </FORM>
-    {% endif %}
 
+
+    </FORM>
+
+    {% endif %}
+    <P>We DO NOT download or cache your social data!!</P>
 {% endblock %}

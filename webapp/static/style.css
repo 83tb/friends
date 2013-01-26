@@ -2,10 +2,10 @@
    font-family: Helvetica, Arial;
 }
 
-body { padding-left: 2px; padding-right: 2px;}
+body { padding-left: 2px; padding-right: 2px; background: #ededed;}
 
 
-.media { border: 1px solid #dddddd; }
+.media { border: 1px solid #dddddd; background: #fbfbfb; border-radius: 6px; }
 
 #access-token {
    width: 200px;

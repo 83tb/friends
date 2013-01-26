@@ -3,7 +3,7 @@ from django.template.context import RequestContext
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 import requests
-from django.http import HttpResponse
+from django.http import HttpResponseRedirect
 
 
 def index(request, template='index.html'):
@@ -14,10 +14,16 @@ def index(request, template='index.html'):
 
 
     ]
+
+
     if request.user.is_authenticated():
         user_profile = request.user.get_profile()
 
         profiles = user_profile.profiles
+
+    if request.method == 'POST':
+        return HttpResponseRedirect('query?q=' + str(request.POST['q']))
+
     response = render_to_response(
             template, locals(), context_instance=RequestContext(request)
         )

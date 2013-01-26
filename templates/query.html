@@ -34,7 +34,7 @@
 
 
             {% if entry.website %}
-           <A href='{{ entry.website }}'>{{ entry.website }}</A>
+           <A href='{{ entry.website }}'>{{ entry.website }}</A><BR>
         {% endif %}
 
 
@@ -43,8 +43,12 @@
             {% if entry.services.twitter.thumbnail_url and not entry.thumbnail_url  %}
         <IMG width='50px' SRC='{{ entry.services.twitter.thumbnail_url   }}'>
         {% endif %}
-        {{ entry }}
-            <HR>
+
+            {% if entry.services.twitter.handle  %}
+                <A HREF="twitter.com/{{ entry.services.twitter.handle }}"><IMG width='50px' SRC='http://www.onebodymindspiritlove.com/wp-content/themes/obmsl/images/icons/icon_twitter.png'></A>
+            {% endif %}
+
+
         {% endfor %}
 
 

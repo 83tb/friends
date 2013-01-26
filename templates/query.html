@@ -19,7 +19,14 @@
         <IMG width='90px' SRC='{{ entry.thumbnail_url   }}'>
         {% endif %}
 
-        {% if entry.services.twitter.thumbnail_url and not entry.thumbnail_url  %}
+        {% if entry.website %}
+           <A href='{{ entry.website }}'>{{ entry.website }}</A>
+        {% endif %}
+
+
+
+
+            {% if entry.services.twitter.thumbnail_url and not entry.thumbnail_url  %}
         <IMG width='50px' SRC='{{ entry.services.twitter.thumbnail_url   }}'>
         {% endif %}
         {{ entry }}

@@ -1,6 +1,6 @@
 from django.db import models
 from singly import *
-from django.contrib.auth import User
+from django.contrib.auth.models import User
 
 from django.core.exceptions import ObjectDoesNotExist
 

@@ -14,8 +14,9 @@
 
     <div class="container">
 
-
+        <TABLE class="table table-bordered">
         {% for entry in r %}
+            <TR>
             <div class="row">
 
             {% if entry.name %}
@@ -53,13 +54,14 @@
             <BR>
             {% endif %}
 
-            </div>
+
+            </TR>
         {% endfor %}
 
 
 
 
-    </div>
+    </TABLE>
 
 
 

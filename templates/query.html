@@ -16,7 +16,7 @@
 
         <TABLE class="table table-bordered">
         {% for entry in r %}
-            <TR>
+            <TR><TD>
             <div class="row">
 
             {% if entry.name %}
@@ -46,7 +46,7 @@
 
 
             {% if entry.services.twitter.thumbnail_url and not entry.thumbnail_url  %}
-        <IMG width='50px' SRC='{{ entry.services.twitter.thumbnail_url   }}'>
+        <IMG class="img-rounded" width='50px' SRC='{{ entry.services.twitter.thumbnail_url   }}'>
         {% endif %}
 
             {% if entry.services.twitter.handle  %}
@@ -54,7 +54,7 @@
             <BR>
             {% endif %}
 
-
+            </TD>
             </TR>
         {% endfor %}
 

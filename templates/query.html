@@ -19,7 +19,18 @@
         <IMG width='90px' SRC='{{ entry.thumbnail_url   }}'>
         {% endif %}
 
-        {% if entry.website %}
+            {% if entry.name %}
+                <h3>{{ entry.name }}</h3>
+            {% endif %}
+
+            {% if entry.phone %}
+                <A href='{{ entry.phone }}'>{{ entry.phone }}</A>
+            {% endif %}
+
+
+
+
+            {% if entry.website %}
            <A href='{{ entry.website }}'>{{ entry.website }}</A>
         {% endif %}
 

@@ -15,9 +15,9 @@
 
 
 
-        <TABLE class="table table-bordered">
+        <UL class="media-list">
         {% for entry in r %}
-            <TR><TD>
+            <LI class="media">
 
 
             {% if entry.name %}
@@ -27,7 +27,9 @@
                 <P>{{ entry.description }}<P><BR>
             {% endif %}
         {% if entry.thumbnail_url %}
-        <IMG class="img-rounded" width='90px' SRC='{{ entry.thumbnail_url   }}'>
+        <A class="pull-right">
+        <IMG class="media-object img-rounded" width='50px' DATA-SRC='{{ entry.thumbnail_url   }}'>
+        </A>
         {% endif %}
 
 
@@ -55,14 +57,13 @@
             <BR>
             {% endif %}
 
-            </TD>
-            </TR>
+            </LI>
         {% endfor %}
 
 
 
 
-    </TABLE>
+    </UL>
 
 
 

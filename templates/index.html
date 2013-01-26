@@ -23,10 +23,10 @@
 
 
     {% if request.user.is_authenticated %}
-    <FORM method="POST">
+    <FORM class="form-search" method="POST">
 
         <INPUT type="text" name="q">
-        <BUTTON type="submit">Search</BUTTON>
+        <BUTTON class="btn btn-success" type="submit">Search</BUTTON>
 
     </FORM>
     {% endif %}

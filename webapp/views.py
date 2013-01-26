@@ -40,7 +40,7 @@ def query(request, template='query.html'):
     try:
         q = request.GET['q']
         user_profile = request.user.get_profile()
-        r = requests.get('https://api.singly.com/friends/all?limit=20&q='+q+'&access_token='+user_profile.access_token)
+        r = requests.get('https://api.singly.com/friends/all?limit=50&q='+q+'&access_token='+user_profile.access_token)
         r = r.json()
         response = render_to_response(
             template, locals(), context_instance=RequestContext(request)

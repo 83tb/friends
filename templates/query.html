@@ -4,6 +4,7 @@
 
 {% block content %}
 
+
 <h1><a href="/">Friends</a></h1>
 
     <FORM class="form-search" method="POST">
@@ -19,18 +20,15 @@
         {% for entry in r %}
             <LI class="media">
 
+            <DIV class="media-body">
 
             {% if entry.name %}
-                <h3>{{ entry.name }}</h3>
+                <h3 class="media-heading">{{ entry.name }}</h3>
             {% endif %}
             {% if entry.description %}
                 <P>{{ entry.description }}<P><BR>
             {% endif %}
-        {% if entry.thumbnail_url %}
-        <A class="pull-right">
-        <IMG class="media-object img-rounded" width='50px' SRC='{{ entry.thumbnail_url   }}'>
-        </A>
-        {% endif %}
+
 
 
 
@@ -48,14 +46,24 @@
 
 
 
-            {% if entry.services.twitter.thumbnail_url and not entry.thumbnail_url  %}
-        <IMG class="img-rounded" width='50px' SRC='{{ entry.services.twitter.thumbnail_url   }}'>
-        {% endif %}
 
             {% if entry.services.twitter.handle  %}
                 <A HREF="http://twitter.com/{{ entry.services.twitter.handle }}"><IMG width='50px' SRC='http://www.onebodymindspiritlove.com/wp-content/themes/obmsl/images/icons/icon_twitter.png'></A>
             <BR>
             {% endif %}
+
+            </div>
+                {% if entry.thumbnail_url %}
+                    <A class="pull-right">
+                        <IMG class="media-object img-rounded" width='70px' SRC='{{ entry.thumbnail_url   }}'>
+                    </A>
+                {% endif %}
+
+
+                {% if entry.services.twitter.thumbnail_url and not entry.thumbnail_url  %}
+                    <IMG class="img-rounded" width='50px' SRC='{{ entry.services.twitter.thumbnail_url   }}'>
+                {% endif %}
+
 
             </LI>
         {% endfor %}

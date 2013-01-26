@@ -1,6 +1,6 @@
 from django.db import models
 from singly import *
-from user import User
+from webapp.user import User
 from django.core.exceptions import ObjectDoesNotExist
 
 

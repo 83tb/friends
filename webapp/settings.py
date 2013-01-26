@@ -8,7 +8,7 @@ PROJECT_ROOT = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 SINGLY_CLIENT_ID = '9f1f0abe1116849dfbda7bbd00603865'
 SINGLY_CLIENT_SECRET = '602eea7337575debd78423b6e5d2a856'
 # lvh.me is just a domain name for localhost
-SINGLY_REDIRECT_URI = 'http://protected-chamber-9284.herokuapp.com/authorize/callback'
+SINGLY_REDIRECT_URI = 'http://185.5.96.195/authorize/callback'
 
 AUTH_PROFILE_MODULE = "singly.UserProfile"
 

@@ -19,6 +19,16 @@
         <UL class="media-list">
         {% for entry in r %}
             <LI class="media">
+                {% if entry.thumbnail_url %}
+                    <A class="pull-right">
+                        <IMG class="media-object img-rounded" width='70px' SRC='{{ entry.thumbnail_url   }}'>
+                    </A>
+                {% endif %}
+
+
+                {% if entry.services.twitter.thumbnail_url and not entry.thumbnail_url  %}
+                    <IMG class="img-rounded" width='50px' SRC='{{ entry.services.twitter.thumbnail_url   }}'>
+                {% endif %}
 
             <DIV class="media-body">
 
@@ -53,16 +63,7 @@
             {% endif %}
 
             </div>
-                {% if entry.thumbnail_url %}
-                    <A class="pull-right">
-                        <IMG class="media-object img-rounded" width='70px' SRC='{{ entry.thumbnail_url   }}'>
-                    </A>
-                {% endif %}
 
-
-                {% if entry.services.twitter.thumbnail_url and not entry.thumbnail_url  %}
-                    <IMG class="img-rounded" width='50px' SRC='{{ entry.services.twitter.thumbnail_url   }}'>
-                {% endif %}
 
 
             </LI>
